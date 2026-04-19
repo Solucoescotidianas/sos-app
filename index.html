@@ -257,7 +257,7 @@
       render();
       try {
         // Chama a função Netlify — sem chave no código!
-        const res = await fetch('/.netlify/functions/chat', {
+        const res = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ messages: state.msgs.map(function(m) { return {role:m.role, content:m.content}; }) })
